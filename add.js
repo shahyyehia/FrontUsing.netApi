@@ -6,7 +6,7 @@ let name = document.getElementById("name").value;
    //document.getElementById("both").innerHTML="";
    
     // Displaying the value
-    fetch('http://nada123-001-site1.ftempurl.com/Restaurant/post',
+    fetch('http://localhost:9090/Restaurant/post',
     {
         method:"POST",
         headers: {
@@ -20,7 +20,7 @@ let name = document.getElementById("name").value;
             location:loc})
     }).then(res=>{
 
-        window.location.href = "file:///D:/4th%20year/first%20term/cloud/project/main.html";
+        window.location.href = "main.html";
     
     })
     return false;
