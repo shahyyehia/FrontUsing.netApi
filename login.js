@@ -6,7 +6,7 @@ function getInputValue()
   let password = document.getElementById("pass").value;
   // Displaying the value
   console.log(email);
-  fetch('http://nada123-001-site1.ftempurl.com/User/GetUserByEmail?email='+email,
+  fetch('http://localhost:9090/User/GetUserByEmail?email='+email,
   {
       method:"GET",
       
@@ -32,7 +32,7 @@ function getInputValue()
       {
         console.log("good");
         document.getElementById("p").innerHTML=data.user.password;
-        window.location.href = "file:///D:/4th%20year/first%20term/cloud/project/main.html";
+        window.location.href = "main.html";
     
       }
         }
@@ -40,4 +40,5 @@ function getInputValue()
 })
   return false;
 }
+
 
