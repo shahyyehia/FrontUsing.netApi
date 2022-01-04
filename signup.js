@@ -4,7 +4,7 @@ function getInputValue() {
     let email = document.getElementById("email").value;
     let password = document.getElementById("pass").value;
     // Displaying the value
-    fetch('http://nada123-001-site1.ftempurl.com/User/post',
+    fetch('http://localhost:9090/User/post',
     {
         method:"POST",
         headers: {
@@ -19,7 +19,7 @@ function getInputValue() {
             password:password})
     }).then(res=>{
        
-       // window.location.href = "file:///D:/4th%20year/first%20term/cloud/project/main.html";
+        window.location.href = "main.html";
       
     }
     )
