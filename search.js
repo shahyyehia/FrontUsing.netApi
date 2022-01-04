@@ -4,7 +4,7 @@ function getInputValue1() {
    document.getElementById("typee").innerHTML="";
     
     // Displaying the value
-    fetch('http://nada123-001-site1.ftempurl.com/Restaurant/GetRestaurantByType/?type='+type,
+    fetch('http://localhost:9090/Restaurant/GetRestaurantByType/?type='+type,
     {
         method:"GET",
     }).then(res=>res.json())
@@ -31,7 +31,7 @@ function getInputValue1() {
    let loc = document.getElementById("location").value;
    document.getElementById("loc").innerHTML="";
     // Displaying the value
-    fetch('http://nada123-001-site1.ftempurl.com/Restaurant/GetRestaurantByLocation/?location='+loc,
+    fetch('http://localhost:9090/Restaurant/GetRestaurantByLocation/?location='+loc,
     {
         method:"GET",
     }).then(res=>res.json())
@@ -59,7 +59,7 @@ function getInputValue1() {
    document.getElementById("both").innerHTML="";
    
     // Displaying the value
-    fetch('http://nada123-001-site1.ftempurl.com/Restaurant/GetRestaurantByLocationAndType/?location='+loc+'&type='+type,
+    fetch('http://localhost:9090/Restaurant/GetRestaurantByLocationAndType/?location='+loc+'&type='+type,
     {
         method:"GET",
     }).then(res=>res.json())
