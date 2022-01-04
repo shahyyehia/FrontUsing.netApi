@@ -5,7 +5,7 @@ function getInputValue() {
     let type = document.getElementById("type").value;
     let location = document.getElementById("location").value;
     // Displaying the value
-    fetch('http://nada123-001-site1.ftempurl.com/Restaurant/put',
+    fetch('http://localhost:9090/Restaurant/put',
     {
         method:"PUT",
         headers:{
@@ -18,7 +18,7 @@ function getInputValue() {
             location:location})
     }).then(res=>{
        
-        window.location.href = "file:///D:/4th%20year/first%20term/cloud/project/main.html";
+        window.location.href = "main.html";
     }
 
     )
