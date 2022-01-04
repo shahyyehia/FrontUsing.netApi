@@ -1,45 +1,30 @@
 function getInputValue() {
     // Selecting the input element and get its value 
-   let username = document.getElementById("Username").value;
+   let id = document.getElementById("id").value;
+    let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
-    let password = document.getElementById("pass").value;
+    let password = document.getElementById("password").value;
     // Displaying the value
-    fetch('http://localhost:9090/User/post',
-    {
-        method:"POST",
-        headers: {
-    'Accept': 'application/json',
-    'Content-Type': 'application/json',
     
-    },
+    fetch('http://localhost:9090/User/put',
+    {
+        method:"PUT",
+        headers:{
+            'Content-Type':'application/json'
+            },
         body: JSON.stringify({
-            id:0,
-            name:username,
-            email:email,
-            password:password})
+            id:id,
+            name:name,
+            password:password,
+            email:email})
     }).then(res=>{
        
         window.location.href = "main.html";
-      
     }
+
     )
-    /*if(username=="")
-    {
-        document.getElementById("u").innerHTML="username can't be empty";
-    }
-    else
-    {
-        document.getElementById("u").innerHTML="";
-    }
-    if(password=="")
-    {
-        document.getElementById("p").innerHTML="password can't be empty";
-    }
-    else
-    {
-        document.getElementById("p").innerHTML="";
-    }
-    */
+    
+    
     return false;
     
   }
