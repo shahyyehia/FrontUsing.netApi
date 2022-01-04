@@ -1,47 +1,45 @@
 function getInputValue() {
     // Selecting the input element and get its value 
-   let id = document.getElementById("id").value;
-    let name = document.getElementById("name").value;
+   let username = document.getElementById("Username").value;
     let email = document.getElementById("email").value;
-    let password = document.getElementById("password").value;
+    let password = document.getElementById("pass").value;
     // Displaying the value
-    
-    fetch('http://nada123-001-site1.ftempurl.com/User/put',
+    fetch('http://localhost:9090/User/post',
     {
-        method:"PUT",
-        headers:{
-            'Content-Type':'application/json'
-            },
+        method:"POST",
+        headers: {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json',
+    
+    },
         body: JSON.stringify({
-            id:id,
-            name:name,
-            password:password,
-            email:email})
+            id:0,
+            name:username,
+            email:email,
+            password:password})
     }).then(res=>{
        
-        window.location.href = "file:///D:/4th%20year/first%20term/cloud/project/main.html";
+        window.location.href = "main.html";
+      
     }
-
     )
-    fetch('http://nada123-001-site1.ftempurl.com/User/put',
+    /*if(username=="")
     {
-        method:"PUT",
-        headers:{
-            'Content-Type':'application/json'
-            },
-        body: JSON.stringify({
-            id:id,
-            name:name,
-            password:password,
-            email:email})
-    }).then(res=>{
-       
-        window.location.href = "file:///D:/4th%20year/first%20term/cloud/project/main.html";
+        document.getElementById("u").innerHTML="username can't be empty";
     }
-
-    )
-    
-    
+    else
+    {
+        document.getElementById("u").innerHTML="";
+    }
+    if(password=="")
+    {
+        document.getElementById("p").innerHTML="password can't be empty";
+    }
+    else
+    {
+        document.getElementById("p").innerHTML="";
+    }
+    */
     return false;
     
   }
